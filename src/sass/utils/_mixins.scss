@@ -1,0 +1,9 @@
+// Titles
+@mixin title {
+    font-size: $title-size;
+}
+
+// Bold text
+@mixin bold {
+    font-weight: $font-bold;
+}
