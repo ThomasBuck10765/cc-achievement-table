@@ -6,16 +6,9 @@
 @import "utils/mixins";
 
 // Components
-// @import "components/back-button/back-button";
-
-// @import "components/menu/game-selection";
-// @import "components/menu/menu";
-
-// @import "components/high-scores/high-scores";
-
-// @import "components/set-username/set-username";
-
-// @import "components/settings/settings";
+@import "components/button";
+@import "components/achievement-table";
+@import "components/save-file-input";
 
 // Pages
 @import "pages/page";

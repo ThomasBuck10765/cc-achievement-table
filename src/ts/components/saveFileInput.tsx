@@ -1,10 +1,25 @@
 import { Component } from "react";
 import { SaveFileInputProps } from "../types/components/saveFileInputProps";
+import Button from "./button";
+import parseSaveFile from "../helpers/save-parser";
 
 export default class SaveFileInput extends Component<SaveFileInputProps> {
 
     submitSaveFile() {
-        console.log("TODO:");
+        if (this.props.saveFile.length === 0) {
+            alert("Please enter a value");
+            return;
+        }
+
+        try {
+            this.props.setAchievementsData(parseSaveFile(this.props.saveFile));
+            this.props.setSaveFileIsValid(true);
+        }
+        catch(error: any) {
+            this.props.setSaveFileIsValid(false);
+            // TODO: Display error message to user so we can be specific
+            console.log(error.message);
+        }
     }
 
     render() {
@@ -17,10 +32,30 @@ export default class SaveFileInput extends Component<SaveFileInputProps> {
                     </label>
                 </div>
 
-                <div className="save-file__submit-cont">
-                    <button className="save-file__submit" type="submit" onClick={() => this.submitSaveFile()}>Submit</button>
-                </div>
+                <Button
+                    buttonText="Submit save"
+                    className="submit-save"
+                    onClick={() => this.submitSaveFile()}
+                />
+
+                {this.props.achievementsData.length !== 0 && 
+                    <Button
+                        buttonText="Reset save"
+                        className="reset-save"
+                        onClick={() => {
+                            this.props.setSaveFile("");
+                            this.props.setAchievementsData("");
+                        }}
+                    />
+                }
+                
+                {!this.props.saveFileIsValid && 
+                    <div>
+                        Your save file is invalid.
+                    </div>
+                }
+
             </div>
-        )
+        );
     }
 }

@@ -1,4 +1,4 @@
-const sortedById = [
+const achievementsSortedById = [
     {
         "id": 0,
         "name": "Wake and bake",
@@ -4502,4 +4502,4 @@ const sortedById = [
     }
 ];
 
-export default sortedById;
+export default achievementsSortedById;
