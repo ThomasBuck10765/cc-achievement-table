@@ -12,7 +12,7 @@ export default class AchievementTable extends Component<AchievementTableProps> {
             <tr key={index} className={`${achievementData.pool}-achievement`}>
                 <td>{achievementData.id}</td>
                 <td>{achievementData.name}</td>
-                <td className={`spoiler-relevant ${showingSpoilers === true ? "show-spoilers" : ""}`}>{achievementData.desc}</td>
+                <td className={`spoiler-relevant ${showingSpoilers === true ? "show-spoilers" : ""}`} dangerouslySetInnerHTML={{ __html: achievementData.desc}}></td>
                 <td>{achievementData.pool}</td>
             </tr>
         );

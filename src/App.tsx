@@ -42,14 +42,14 @@ export default function App() {
 
 			{saveFileIsValid && achievementsData !== "" &&
 				<Fragment>
-					<h2>Achievements gotten:</h2>
+					<h2>Achievements gotten ({achievementsData.split('1').length - 1} of {achievementsData.length}):</h2>
 						<AchievementTable 
 							achievementsData={achievementsData} 
 							gottenAchievements={true}
 							className=""
 						/>
 					
-					<h2>Achievements remaining:</h2>
+					<h2>Achievements remaining ({achievementsData.split('0').length - 1} of {achievementsData.length}):</h2>
 						<AchievementTable
 							achievementsData={achievementsData}
 							gottenAchievements={false}

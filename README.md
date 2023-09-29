@@ -1,8 +1,8 @@
-# Cookie Clicker Achievement Calculator
+# Cookie Clicker Achievement Table
 
-Webapp which displays the achievements you have remaining on CookieClicker (v. 2.052) by parsing through your saved data file.
+WebApp which displays the achievements you have remaining on CookieClicker (v. 2.052) by parsing through your saved data file.
 
-Built in React 18 using TypeScript 4. TODO: This is currently being hosted in Azure here
+Built in React 18 using TypeScript 4. This is currently being hosted in Azure [here](https://cc-achievement-table.azurewebsites.net)
 
 ## Available Scripts
 
@@ -29,3 +29,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### TODO
 
+- Styling
+  - Make everything look better
+- Firebase
+  - It would be possible to store a high score of people's % completion over all achievements and on specific achievements
+  - But this is a little excessive
