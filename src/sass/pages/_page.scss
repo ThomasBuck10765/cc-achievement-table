@@ -1,0 +1,14 @@
+.cookie-clicker-achievement-table {
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    @include button;
+
+    &.__dark-mode {
+        background-color: $black;
+        color: $white;
+
+        @include button__dark-mode;
+    }
+}

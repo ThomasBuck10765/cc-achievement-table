@@ -1,0 +1,15 @@
+/// <reference include="../../utils/_variables.scss">
+
+$base-class: save-file;
+
+.#{$base-class} {
+    .#{$base-class}__input-container {
+        label {
+            .#{$base-class}__input {
+                display: block;
+                margin: auto;
+                width: 80%;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+/// <reference include="../../utils/_mixins.scss">
+/// <reference include="../../utils/_variables.scss">
+
+.mode-switcher, .spoiler-switcher, .reset-save {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reset-save {
+    right: 0;
+    left: auto;
+}
+
+.spoiler-switcher {
+    top: 25px;
+}
