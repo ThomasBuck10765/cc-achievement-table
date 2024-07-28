@@ -12,7 +12,7 @@ export default function App() {
 
 	return (
 		<div className={`cookie-clicker-achievement-table${useDarkMode === true ? " __dark-mode" : ""}`}>
-
+			Test
 			<Button 
 				buttonText={`${useDarkMode ? "Light" : "Dark"} Mode`} 
 				className="mode-switcher"
